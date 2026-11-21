@@ -15,8 +15,6 @@ local function Register()
 		else
 			TwitchEmotes:AddEmote(key, key, path .. ":28:28")
 		end
-		-- The Discord bridge relays emojis as ":name:" text; show those as the emote too
-		TwitchEmotes_emoticons[":" .. name .. ":"] = key
 		names[#names + 1] = key
 	end
 
