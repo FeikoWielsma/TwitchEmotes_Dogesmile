@@ -8,6 +8,11 @@ Where a name already exists in Twitch Emotes (`kekw`, `monkaS`, `COPIUM`, ...), 
 
 Download: [CurseForge](https://www.curseforge.com/wow/addons/twitch-emotes-dogesmile)
 
+## Who has it?
+
+`/dogesmile check` lists which online guild members have the addon (and their version), and who
+doesn't. Only members on a version that has this command (v1.2+) can answer.
+
 ## Adding or changing emotes
 
 1. Put the image (PNG, GIF or WEBP, static or animated) in `src/public/`. The file name is the

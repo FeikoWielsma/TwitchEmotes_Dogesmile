@@ -8,3 +8,4 @@
 
 EmoteData.lua
 Core.lua
+Check.lua
