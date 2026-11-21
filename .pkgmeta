@@ -1,0 +1,9 @@
+package-as: TwitchEmotes_Dogesmile
+
+required-dependencies:
+  - twitch-emotes-v2
+
+ignore:
+  - src
+  - tools
+  - README.md
