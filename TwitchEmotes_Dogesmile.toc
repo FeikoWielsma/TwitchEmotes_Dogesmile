@@ -1,7 +1,7 @@
 ## Interface: 120100, 120105, 50500, 50504, 40402, 38002, 30405, 20505, 20506, 16001, 11508, 11509
 ## Title: |TInterface\AddOns\TwitchEmotes_Dogesmile\icon:0|t Twitch Emotes: dogesmile
 ## IconTexture: Interface\AddOns\TwitchEmotes_Dogesmile\icon
-## Notes: Adds the :dogesmile guild Discord emotes to Twitch Emotes. Type them as :name: in chat.
+## Notes: Adds the :dogesmile guild Discord emotes to Twitch Emotes. Type : and the emote name in chat to autocomplete.
 ## Version: @project-version@
 ## X-Curse-Project-ID: 1819582
 ## Dependencies: TwitchEmotes

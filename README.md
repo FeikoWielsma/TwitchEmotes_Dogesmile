@@ -1,14 +1,17 @@
 # Twitch Emotes - dogesmile
 
 Adds the emotes from the :dogesmile Discord server to [Twitch Emotes v2](https://www.curseforge.com/wow/addons/twitch-emotes-v2).
-Type them in chat as `:name:`, or pick them from the Twitch Emotes menu (the "dogesmile" categories).
+Type the emote name in chat (`doge`, `kekw`, ...). Typing `:` followed by a few letters opens the
+autocomplete. You can also pick them from the Twitch Emotes menu (the "dogesmile" categories).
+
+Where a name already exists in Twitch Emotes (`kekw`, `monkaS`, `COPIUM`, ...), the dogesmile version replaces it.
 
 Download: [CurseForge](https://www.curseforge.com/wow/addons/twitch-emotes-dogesmile)
 
 ## Adding or changing emotes
 
 1. Put the image (PNG, GIF or WEBP, static or animated) in `src/public/`. The file name is the
-   emote name: `peepoclap.webp` becomes `:peepoclap:`. An optional `@<discord id>` suffix is ignored
+   emote name: `peepoclap.webp` becomes `peepoclap`. Names are case-sensitive. An optional `@<discord id>` suffix is ignored
    (`peepoclap@123456.webp`).
 2. Run `python tools/build.py` (needs `pip install pillow`) and `/reload` in game to test.
 3. Commit and push.

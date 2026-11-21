@@ -1,4 +1,4 @@
--- Adds the :dogesmile Discord emotes to TwitchEmotes. Type them as :name: in chat.
+-- Adds the :dogesmile Discord emotes to TwitchEmotes. Type the name in chat (":" opens the autocomplete).
 local ADDON_NAME = ...
 local BASE = "Interface\\AddOns\\" .. ADDON_NAME .. "\\Emotes\\"
 local CATEGORY = "dogesmile"
@@ -7,7 +7,7 @@ local function Register()
 	local names = {}
 	for _, entry in ipairs(Dogesmile_EmoteData) do
 		local name, file, anim = entry[1], entry[2], entry[3]
-		local key = ":" .. name .. ":"
+		local key = name -- plain word like the built-in emotes; ":" is only the autocomplete trigger
 		local path = BASE .. file .. ".tga"
 		if anim then
 			TwitchEmotes_animation_metadata[path] = anim
@@ -30,9 +30,16 @@ local function Register()
 	end
 
 	-- TwitchEmotes builds its autocomplete list before we load, so add ours to it
+	-- (skipping names it already has; ours replace those built-in emotes)
 	if AllTwitchEmoteNames and #AllTwitchEmoteNames > 0 then
+		local known = {}
+		for _, key in ipairs(AllTwitchEmoteNames) do
+			known[key] = true
+		end
 		for _, key in ipairs(names) do
-			AllTwitchEmoteNames[#AllTwitchEmoteNames + 1] = key
+			if not known[key] then
+				AllTwitchEmoteNames[#AllTwitchEmoteNames + 1] = key
+			end
 		end
 		table.sort(AllTwitchEmoteNames)
 	end
